@@ -6,8 +6,12 @@
   background-position: center
   padding: 70px 0
   min-height: 710px
+  text-align: center
 
 .teamList
+  display: flex
+  justify-content: center
+  gap: 8px
   margin-top: 45px
 
 .team_title_holder
@@ -38,18 +42,22 @@
   width: 220px
 
 .team_button
+  font-family: "Hammersmith One", sans-serif
+  font-size: 1rem
   border-color: #00e0d0
+  border-radius: 2px
   color: #00e0d0
   min-width: 120px
   min-height: 40px
-  border-radius: 2px
-  font-family: "Hammersmith One", sans-serif
-  font-size: 1rem
+  transition: all 0.3s ease
 
   &:focus, &:hover
-    color: #00e0d0 !important
-    background-color: transparent !important
-    border-color: #00e0d0 !important
+    color: #00e0d0
+    background-color: transparent
+    border-color: #00e0d0
+    text-decoration: none
+    outline: none
+    box-shadow: none
 
 .label
   margin: 0 auto
@@ -84,3 +92,7 @@
 
   .label
     width: 180px
+
+@media screen and (max-width: 945px)
+  .teamList
+    flex-direction: column

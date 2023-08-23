@@ -20,7 +20,7 @@ const Footer = () => {
       <Container>
         <Row className="contacts_block">
           <Col lg={4} className="text-start">
-            <img src={logo} alt="logo" />
+            <a href="#header"><img src={logo} alt="logo"  className="footer_logo"/></a>
             <p className="logo">
               lorem quis bibendum auctor, nisi elit consequat ipsum, nec
               sagittis sem nibh elit. Duis sed odio sit amet auctror a ornare
@@ -55,24 +55,24 @@ const Footer = () => {
               ></button>
             </div>
             <div className="footer_contacts">
-              <img src={facebook} alt="address" />
-              <img src={twitter} alt="address" />
-              <img src={unknown} alt="address" />
-              <img src={instagram} alt="address" />
-              <img src={google} alt="address" />
-              <img src={youtube} alt="address" />
+              <a href="/facebook"><img src={facebook} alt="address" /></a>
+              <a href="/twitter"><img src={twitter} alt="address" /></a>
+              <a href="/unknown"><img src={unknown} alt="address" /></a>
+              <a href="/instagram"><img src={instagram} alt="address" /></a>
+              <a href="/google"><img src={google} alt="address" /></a>
+              <a href="/youtube"><img src={youtube} alt="address" /></a>
             </div>
           </Col>
         </Row>
         <Row className="footer_nav">
           <Col md={1} className="text-start">
-            <p>HELP</p>
+            <a href="/help" className="footer_nav_links">HELP</a>
           </Col>
           <Col md={2} className="text-start">
-            <p>TERMS & CONDITION</p>
+            <a href="/help" className="footer_nav_links">TERMS & CONDITION</a>
           </Col>
           <Col md={1} className="text-start">
-            <p>PRIVACY</p>
+            <a href="/help" className="footer_nav_links">PRIVACY</a>
           </Col>
           <Col md={4} className="" />
           <Col md={3} className="text-start">

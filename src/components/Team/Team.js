@@ -1,9 +1,8 @@
 import React from "react";
 import "./Team.sass";
 import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import ButtonOutline from "../Button/Button";
+import TeamMember from "./TeamMember";
 
 const teamData = [
   {
@@ -38,33 +37,27 @@ const teamData = [
 
 const Team = () => {
   return (
-    <section id="team" className="block team-block text-center">
+    <section id="team" className="block team-block">
       <Container fluid>
         <div className="team_title_holder">
-          <h2 className="text-center">MEET OUR AMAZING TEAM</h2>
-          <div className="top_subtitle text-center">
+          <h2>MEET OUR AMAZING TEAM</h2>
+          <div className="top_subtitle">
             Lorem ipsum dolor sit amet proin gravida nibh vel velit
           </div>
         </div>
-        <Row className="teamList">
-          {teamData.map((team) => {
-            return (
-              <Col xs={6} md={3} key={team.id}>
-                <div className="team-wrapper text-center">
-                  <a href={team.link}>
-                    <img src={team.icon} alt="icon" className="team_icon" />
-                    <div className="label text-center">
-                      <h3>{team.name}</h3>
-                      <p>{team.specialization}</p>
-                    </div>
-                  </a>
-                </div>
-              </Col>
-            );
-          })}
-        </Row>
+        <div className="teamList">
+          {teamData.map(({ id, icon, name, specialization, link }) => (
+            <TeamMember
+              key={id}
+              icon={icon}
+              name={name}
+              specialization={specialization}
+              link={link}
+            />
+          ))}
+        </div>
         <div className="title-holder">
-          <h6 className="bot_subtitle text-center">
+          <h6 className="bot_subtitle">
             Become part of our dream team, let’s join us !
           </h6>
         </div>

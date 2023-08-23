@@ -17,7 +17,7 @@ const OurStory = () => {
           <Col lg={5} className="text-center">
             <Image src={OurStoryIcon} fluid />
           </Col>
-          <Col lg={7}>
+          <Col lg={7} className="story-description">
             <h2>OUR STORY</h2>
             <p className="description_rgba">
               This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel

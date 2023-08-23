@@ -46,7 +46,7 @@ const ContactForm = () => {
             />
           </Form.Group>
 
-          <Button variant="primary" className="submit_form">
+          <Button variant="outline" className="submit_form">
             SUBMIT
           </Button>
         </Form>
